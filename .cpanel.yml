@@ -7,3 +7,4 @@ deployment:
     - /bin/cp -R images/ $DEPLOYPATH
     - /bin/cp -R scripts/ $DEPLOYPATH
     - /bin/cp -R html/* $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
