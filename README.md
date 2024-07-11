@@ -85,7 +85,9 @@ This folder is read by [`generator.py`](#generatorpy) to build the  HTML documen
 
 ### `scripts/`
 
-Meant for containing JavaScript files. Currently empty.
+Contains JavaScript files. There's only one for now:
+
+- `main.js` — used by all pages
 
 ### `.cpanel.yml`
 
