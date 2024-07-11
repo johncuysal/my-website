@@ -7,3 +7,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Remove "www" from all URLs
 RewriteCond %{HTTP_HOST} ^www.(.+)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Remove trailing slashes from all URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
