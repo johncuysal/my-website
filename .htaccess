@@ -1,5 +1,9 @@
 RewriteEngine On
 
-# Remove trailing slashes from URLs
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
+# Redirect HTTP URLs to corresponding HTTPS URLs
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove "www" from all URLs
+RewriteCond %{HTTP_HOST} ^www.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
