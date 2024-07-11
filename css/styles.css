@@ -144,6 +144,7 @@ article {
 
 .postcard__image {
   width: 160px;
+  height: 90px;
 }
 
 .postcard__body {
