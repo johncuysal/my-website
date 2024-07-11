@@ -1,0 +1,16 @@
+[
+    {
+        "IMAGE_PATH": "/images/discretopia.png",
+        "ALT_TEXT": "A screenshot of Discretopia.",
+        "TITLE": "Discretopia",
+        "DESCRIPTION": "friendly guide to discrete math",
+        "URL": "discretopia"
+    },
+    {
+        "IMAGE_PATH": "/images/a-good-scheduler.png",
+        "ALT_TEXT": "A screenshot of A Good Scheduler.",
+        "TITLE": "A Good Scheduler",
+        "DESCRIPTION": "view all conflict-free schedules",
+        "URL": "a-good-scheduler"
+    }
+]

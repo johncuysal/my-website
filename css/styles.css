@@ -1,0 +1,268 @@
+/*
+  This stylesheet is used by all pages.
+
+  Contents:
+  - General
+  - Body
+    - Main
+      - Header
+        - Signature
+        - Top navigation
+      - Article
+        - Landscape image
+        - Postcard
+      - Footer
+        - External navigation
+  - Typography
+  - Variables
+
+  You can jump from section to section by searching "||".
+*/
+
+/* || General */
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: var(--golden-ratio);
+}
+
+img {
+  border-radius: 10px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/* || Body */
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+/* || Main */
+
+main {
+  max-width: 700px;
+  margin: 20px;
+}
+
+/* || Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* || Signature */
+
+.signature {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 64%;
+}
+
+.signature__image {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--text-color);
+}
+
+/* || Top navigation */
+
+.top-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .top-navigation {
+    flex-direction: column;
+  }
+}
+
+.top-navigation__link {
+  color: var(--text-color);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.top-navigation__link:hover {
+  text-decoration: underline;
+}
+
+/* || Article */
+
+article {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* || Landscape image */
+
+.landscape-image {
+  width: 100%;
+}
+
+/* || Postcard */
+
+.postcard {
+  display: flex;
+  text-decoration: none;
+  gap: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.postcard__image {
+  width: 160px;
+  height: fit-content;
+}
+
+.postcard__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postcard__body__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.postcard__body__description {
+  font-weight: normal;
+}
+
+@media (max-width: 576px) {
+  .postcard {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .postcard__body {
+    align-items: center;
+  }
+}
+
+/* || Footer */
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* || External navigation */
+
+.external-navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.external-navigation__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 24px;
+  height: 24px;
+}
+
+.external-navigation__link__icon {
+  fill: var(--text-color);
+  width: 32px;
+}
+
+/* || Typography */
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Regular.eot");
+  src: url("/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/Lato-Regular.woff2") format("woff2"),
+       url("/fonts/Lato-Regular.woff") format("woff"),
+       url("/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Bold.eot");
+  src: url("/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/Lato-Bold.woff2") format("woff2"),
+       url("/fonts/Lato-Bold.woff") format("woff"),
+       url("/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Italic.eot");
+  src: url("/fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/Lato-Italic.woff2") format("woff2"),
+       url("/fonts/Lato-Italic.woff") format("woff"),
+       url("/fonts/Lato-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-BoldItalic.eot");
+  src: url("/fonts/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/Lato-BoldItalic.woff2") format("woff2"),
+       url("/fonts/Lato-BoldItalic.woff") format("woff"),
+       url("/fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* || Variables */
+
+:root {
+  --golden-ratio: 1.618;
+  --text-color: #225791;
+  --body-background-color: #c9dade;
+  --border-color: #6b8db1;
+}

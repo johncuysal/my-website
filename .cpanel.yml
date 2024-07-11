@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/johncuys/public_html/
+    - /bin/cp -R css/ $DEPLOYPATH
+    - /bin/cp -R fonts/ $DEPLOYPATH
+    - /bin/cp -R images/ $DEPLOYPATH
+    - /bin/cp -R scripts/ $DEPLOYPATH
+    - /bin/cp -R html/* $DEPLOYPATH
